@@ -1,0 +1,58 @@
+
+
+
+
+<p>Learning Word: {{course.nodes}}</p>
+<p>{{course.description}}</p>
+<p>{{position}}</p>
+
+<div ng-controller="NodesCtrl">  
+  <ul>
+  <!--| filter:{id:picture}:true -->
+    <li ng-repeat="node in nodes | filter:{id:step}:true">
+      <img ng-src="{{node.picture}}">
+    </li>
+  </ul>
+</div>
+
+<div ng-controller="WordsCtrl">  
+  <ul>
+  <!-- -->
+    <li ng-repeat="word in words | filter:{node:step}:true ">
+      <p>{{word.word}}</p>
+      <p>{{word.phonetics}}</p>
+      <div ng-show="word.sound">
+        <!-- controls="controls"  preload="none" -->
+        <audio id="{{word.word}}">
+          <source type="audio/mpeg" src="sound/{{word.sound}}" />
+        </audio>
+        <button ng-click="play(word.word)">Play</button>
+
+      </div>
+    </li>
+  </ul>
+</div>  
+<div ng-show="account" ng-controller="WordsLlCtrl">  
+  <ul>
+    <li ng-repeat="word in words | filter:{node:step}:true ">
+      <p>{{word.word}}</p>
+      <a href="sound/{{word.sound}}" >sound</a>
+    </li>
+  </ul>
+</div>
+
+
+
+<div ng-controller="CoursesCtrl">  
+
+  <form ng-submit="back()">
+    <input ng-show="position>0" class="btn-primary" type="submit" value="back">
+  </form> 
+  <form ng-show="position<course.nodes.length-1" ng-submit="next()">
+    <input class="btn-primary" type="submit" value="next">
+  </form> 
+
+</div>
+
+
+

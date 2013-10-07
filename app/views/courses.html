@@ -1,0 +1,9 @@
+<ul>
+  <p>number of courses: {{courses.length}}</p>
+
+  <li ng-repeat="course in courses">
+   <a href="#/courses/{{course.name}}" ng-click="setCourse(course)" >{{course.name}}</a>  
+    
+    <p>{{course.description}}</p>
+  </li>
+</ul>

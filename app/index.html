@@ -26,8 +26,31 @@
       <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
-    <div class="container" ng-view=""></div>
+
+    <div ng-controller="AccountCtrl" >
+      <a ng-hide="username" href="#/account/login">login</a>
+
+      <a ng-show="username" href="#/account/{{username}}">{{username}}</a>
+      <a ng-show="username" href="" ng-click="logout()">logout</a>
+      <!--
+      -->
+
+      <ul class="menu">
+        <li><a href="#/nodes">meanings</a></li>
+        <li><a href="#/courses">courses</a></li>
+      </ul>
+
+      <!-- Add your site or application content here -->
+      <div class="container" ng-view=""></div>
+      <hr>
+
+      <div> {{ 'Current version is v%VERSION%.'}}</div>
+      <div>Angular seed app: v<span app-version></span></div>
+    </div>
+
+
+
+
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -69,5 +92,14 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <!-- endbuild -->
+        <!--
+        <script src="lib/angular/angular-resource.js"></script>  
+        <script src="js/controllers.js"></script>
+        -->
+        <script src="scripts/services.js"></script>
+        <script src="scripts/filters.js"></script>
+        <script src="scripts/directives.js"></script>
+
+
 </body>
 </html>

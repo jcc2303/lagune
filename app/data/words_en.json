@@ -1,0 +1,23 @@
+[ {
+    "word" : "one",
+    "node" : "001"
+  },
+  {
+    "word" : "two",
+    "node" : "002"
+  },
+  {
+    "word" : "face",
+    "node" : "003",
+    "sound" : "face.mp3",
+    "phonetics" : "fais"
+  },
+  {
+    "word" : "man",
+    "node" : "004"
+  },
+  {
+    "word" : "woman",
+    "node" : "005"
+  }
+]

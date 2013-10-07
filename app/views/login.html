@@ -1,0 +1,12 @@
+<h1 ng-show="user" ng-model="user" ng-change >Hola {{user.username}}</h1>
+<form ng-hide="user" name="myForm" ng-submit="login()" >
+    username: <input name="username" ng-model="username" placeholder="salamander" required >
+  <span class="error" ng-show="myForm.username.$error.required">Required!</span><br>
+    password: <input type="password" name="password" ng-model="password" required >
+  <span class="error" ng-show="myForm.email.$error.required">Required!</span><br>
+  <input class="btn-primary" type="submit"  value="login" >
+</form>
+<!-- 
+  <span class="error" ng-show="myForm.password.$error.required">Required!</span><br>
+    email: <input type="email" name="email" ng-model="email" required >
+-->

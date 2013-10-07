@@ -1,0 +1,13 @@
+<ul>
+  <p>number of nodes: {{nodes.length}}</p>
+
+  <li ng-repeat="node in nodes">
+   <a href="#/nodes/{{node.id}}">
+      <p>id: {{node.id}}</p>
+      <img ng-src="{{node.picture}}">
+   </a>
+   <p>{{node.links}}</p>
+    
+    <p>{{node.description}}</p>
+  </li>
+</ul>

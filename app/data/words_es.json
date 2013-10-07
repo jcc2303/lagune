@@ -1,0 +1,22 @@
+[ 
+  {
+    "word" : "uno",
+    "node" : "001"
+  },
+  {
+    "word" : "dos",
+    "node" : "002"
+  },
+  {
+    "word" : "cara",
+    "node" : "003"
+  },
+  {
+    "word" : "hombre",
+    "node" : "004"
+  },
+  {
+    "word" : "mujer",
+    "node" : "005"
+  }
+]

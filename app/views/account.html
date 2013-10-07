@@ -1,0 +1,21 @@
+<p>account: {{account}}</p>
+
+<p>username: {{account.username}}</p>
+<img ng-src="img/users/{{account.picture}}">
+
+
+<p>Language native:</p>
+<div ng-show="account.ml">
+  <p>{{account.ml}}</p>
+</div>
+<div ng-hide="account.ml" ng-controller="LanguageCtrl">
+    <select ng-hide="language" ng-model="language" ng-options="l.name for l in languages"></select><br>    
+</div>
+
+<p>Language learn:</p>
+<div ng-show="account.ll">
+  <p>{{account.ll}}</p>
+</div>
+<div ng-hide="account.ll" ng-controller="LanguageCtrl">
+    <select ng-hide="language" ng-model="language" ng-options="l.name for l in languages"></select><br>
+</div>
