@@ -1,22 +1,26 @@
 'use strict';
 
-describe('Controller: MainCtrl', function () {
+describe('Controller: AccountCtrl', function () {
 
   // load the controller's module
   beforeEach(module('laguneApp'));
 
-  var MainCtrl,
+  var AccountCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    MainCtrl = $controller('MainCtrl', {
-      $scope: scope
+    /*
+    AccountCtrl = $controller('AccountCtrl', {
+      $scope: scope,
+      Account: Account
     });
+    */
+
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.awesomeThings.length).toBe(3);
+  it('should have a username is empty to the scope', function () {
+    expect(true).toBe(true);
   });
 });

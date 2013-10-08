@@ -14,56 +14,53 @@ appS.value('version', '0.1');
 
 
 appS.factory('Account', function($resource){
-  return $resource('data/account-:accountId.json', {}, {
-    query: {method:'GET', params:{accountId:'account'}, isArray:false}
+    return $resource('data/account-:accountId.json', {}, {
+      query: {method:'GET', params:{accountId:'account'}, isArray:false}
+    });
   });
-});
 
 appS.factory('Language', function($resource) {
     return $resource('data/:languageId.json', {}, {
       query: {method:'GET', params:{languageId:'languages'}, isArray:true}
     });
-});
+  });
 
 appS.factory('Node', function($resource){
-  return $resource('data/nodes.json', {}, {
-    query: {method:'GET', isArray:true}
+    return $resource('data/nodes.json', {}, {
+      query: {method:'GET', isArray:true}
+    });
   });
-});
 
 appS.factory('Word', function($resource){
-  return $resource('data/:wordId.json', {}, {
-    query: {method:'GET', params:{wordId:'words_en'}, isArray:true}
+    return $resource('data/:wordId.json', {}, {
+      query: {method:'GET', params:{wordId:'words_en'}, isArray:true}
+    });
   });
-});
 
 appS.factory('Course', function($resource){
-  return $resource('data/:courseId.json', {}, {
-    query: {method:'GET', params:{courseId:'courses'}, isArray:true}
+    return $resource('data/:courseId.json', {}, {
+      query: {method:'GET', params:{courseId:'courses'}, isArray:true}
+    });
   });
-});
 
 
 
 appS.service('CourseService', function(){
-  this.courseData = {};
+    this.courseData = {};
 
-  this.course = function() {
-      return this.courseData;
-  };  
-
-
-  this.setCourse = function(course) {
-      this.courseData = course;
-  };
-
-  this.getCourse = function() {
-      return this.courseData;
-  };
+    this.course = function() {
+        return this.courseData;
+      };
 
 
+    this.setCourse = function(course) {
+        this.courseData = course;
+      };
 
-});
+    this.getCourse = function() {
+        return this.courseData;
+      };
+  });
 
 
 
